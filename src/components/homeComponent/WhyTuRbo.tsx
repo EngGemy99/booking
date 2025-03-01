@@ -1,0 +1,124 @@
+import {
+  AiToolIcon,
+  AutomationIcon,
+  BookingManagementIcon,
+  HolidayPackagesIcon,
+  ItineraryBuilderIcon,
+  OnePlatFormIcon,
+  QuotationSystemIcon,
+} from "@/icons";
+import InventoryManagementIcon from "@/icons/src/inventoryManagement";
+import { CustomContainer } from "@/Wapper/CustomContainer";
+import Description from "../common/Description";
+import Title from "../common/Title";
+
+const items = [
+  {
+    title: "All-in-One Platform",
+    description:
+      "Manage every aspect of your travel business seamlessly under one roof.",
+    icon: <OnePlatFormIcon />,
+  },
+  {
+    title: "Advanced Itinerary Builder",
+    description:
+      "Design detailed and interactive travel plans, personalized to perfection.",
+    icon: <ItineraryBuilderIcon />,
+  },
+  {
+    title: "Real-Time Booking Management",
+    description:
+      "Stay updated with instant availability, bookings, and modifications.",
+    icon: <BookingManagementIcon />,
+  },
+  {
+    title: "Dynamic Quotation System",
+    description:
+      "Effortlessly create and customize quotes tailored to your clients' needs.",
+    icon: <QuotationSystemIcon />,
+  },
+  {
+    title: "Engaging Holiday Packages",
+    description:
+      "Offer dynamic, visually appealing, and customizable travel experiences.",
+    icon: <HolidayPackagesIcon />,
+  },
+  {
+    title: "Supplier & Inventory Management",
+    description:
+      "Streamline operations with centralized control over suppliers and services.",
+    icon: <InventoryManagementIcon />,
+  },
+  {
+    title: "Automation & Efficiency",
+    description:
+      "Save time and reduce manual tasks with automated processes and workflows.",
+    icon: <AutomationIcon />,
+  },
+  {
+    title: "AI-Powered Tools",
+    description:
+      "Enhance efficiency with smart automation, recommendations, and customer support.",
+    icon: <AiToolIcon />,
+  },
+];
+function WhyTuRbo() {
+  return (
+    <CustomContainer
+      size="lg"
+      className="
+    mt-[44px] "
+    >
+      <div className="bg-[#F8E6F9] p-32 rounded-[20px]">
+        <div className="text-center">
+          <Title
+            title="Why"
+            titleColor="text-secondary"
+            className="text-clamp-[22px,4vw,36px]"
+          />{" "}
+          <Title
+            title="TuRbo"
+            titleColor="text-primary"
+            className="text-clamp-[22px,4vw,36px]"
+          />
+          <Description
+            Description="Empower your business with an advanced platform designed to receive and manage bookings online.Streamline reservation processes, improve client experiences, and seamlessly handle inquiries, ensuring your business stays competitive in the digital travel landscape."
+            DescriptionColor="text-grayText"
+            className="text-[12px]"
+          />
+        </div>
+        <div className="grid grid-cols-1 gap-8 mt-16 md:grid-cols-2 lg:grid-cols-3">
+          {items.map((item, index) => (
+            <Box key={index} {...item} />
+          ))}
+        </div>
+      </div>
+    </CustomContainer>
+  );
+}
+
+export default WhyTuRbo;
+
+interface BoxProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}
+const Box = ({ title, description, icon }: BoxProps) => {
+  return (
+    <div className="flex items-center flex-col text-center space-x-4 bg-white p-16 rounded-[20px]">
+      <div>{icon}</div>
+      <div>
+        <Title
+          title={title}
+          titleColor="text-secondary"
+          className="text-[18px]"
+        />
+        <Description
+          Description={description}
+          DescriptionColor="text-grayText"
+        />
+      </div>
+    </div>
+  );
+};
