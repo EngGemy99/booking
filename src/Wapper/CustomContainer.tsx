@@ -12,14 +12,12 @@ export const CustomContainer = ({
   children,
 }: CustomContainerProps) => {
   const containerSize = {
-    lg: "px-[72px]",
+    lg: "px-72",
     md: "px-[68px]",
     sm: "px-[40px]",
-    xs: "px-[16px]", // Fixed typo here
+    xs: "px-[16px]",
   };
 
   // Return the div with the respective padding class and additional className
-  return (
-    <div className={`${containerSize[size]} ${className}`}>{children}</div>
-  );
+  return <div className={`${className} px-16 md:px-72`}>{children}</div>;
 };

@@ -15,3 +15,7 @@ export * from "./src/holidayPackages";
 export * from "./src/inventoryManagement";
 export * from "./src/automation";
 export * from "./src/aiTool";
+export * from "./src/networkingPlatform";
+export * from "./src/vBookingAcademy";
+export * from "./src/exhibitionCenters";
+export * from "./src/worldTravelLibrary";

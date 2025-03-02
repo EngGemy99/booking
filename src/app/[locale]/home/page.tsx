@@ -1,4 +1,7 @@
 import Header from "@/components/homeComponent/Header";
+import InnovativeTechnology from "@/components/homeComponent/InnovativeTechnology";
+import OurTechnology from "@/components/homeComponent/OurTechnology";
+import TravelCommunity from "@/components/homeComponent/TravelCommunity";
 import TurboBookingSuite from "@/components/homeComponent/TurboBookingSuite";
 import UniqueProducts from "@/components/homeComponent/UniqueProducts";
 import WhyTuRbo from "@/components/homeComponent/WhyTuRbo";
@@ -12,6 +15,9 @@ export default function HomePage() {
         <UniqueProducts />
         <TurboBookingSuite />
         <WhyTuRbo />
+        <InnovativeTechnology />
+        <OurTechnology />
+        <TravelCommunity />
       </div>
     </div>
   );

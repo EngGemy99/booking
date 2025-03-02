@@ -24,14 +24,18 @@ const config: Config = {
         secondary: "#2D63CF",
         text: "#224A9A",
         grayText: "#667085",
+        darkText: "#040A38",
         error: "#E91223",
       },
       spacing: {
+        "6": "6px",
         "10": "10px",
         "16": "16px",
         "18": "18px",
+        "20": "20px",
         "24": "24px",
         "32": "32px",
+        "72": "72px",
       },
       fontSize: {
         "22": "22px",

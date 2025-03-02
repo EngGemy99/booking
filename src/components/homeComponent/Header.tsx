@@ -1,17 +1,15 @@
-import { CustomContainer } from "@/Wapper/CustomContainer";
-import React from "react";
-import Title from "../common/Title";
-import Description from "../common/Description";
-import { HeaderImage } from "@/icons";
-import Button from "../common/Button";
-import Image from "next/image";
 import { images } from "@/assets";
+import { CustomContainer } from "@/Wapper/CustomContainer";
+import Image from "next/image";
+import Button from "../common/Button";
+import Description from "../common/Description";
+import Title from "../common/Title";
 
 function Header() {
   return (
     <CustomContainer
       size="lg"
-      className="flex items-center gap-[79px] bg-[#F7FCFC]"
+      className="flex items-center gap-[79px] bg-[#F7FCFC] px-[72px]"
     >
       <div className="flex-1">
         <Title
