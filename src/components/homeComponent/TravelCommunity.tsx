@@ -2,7 +2,6 @@ import React from "react";
 import Title from "../common/Title";
 import Description from "../common/Description";
 import { CustomContainer } from "@/Wapper/CustomContainer";
-import { title } from "process";
 import {
   ExhibitionCentersIcon,
   NetworkingPlatformIcon,
@@ -50,41 +49,44 @@ function TravelCommunity() {
   return (
     <CustomContainer
       size="lg"
-      className="bg-[url(../../assets/images/TravelCommunityBg.jpg)] bg-cover bg-center mt-[44px] "
+      className="bg-[url(../../assets/images/TravelCommunityBg.jpg)] bg-cover bg-center pt-[64px] mt-[32px] relative pb-[3rem]"
     >
-      <div className="text-center">
-        <Title
-          title="Bringing the "
-          titleColor="text-secondary"
-          className="text-clamp-[22px,4vw,36px]"
-        />
-        <Title
-          title="Travel Community "
-          titleColor="text-primary"
-          className="text-clamp-[22px,4vw,36px]"
-        />
-        <Title
-          title="Together"
-          titleColor="text-secondary"
-          className="text-clamp-[22px,4vw,36px]"
-        />
-        <Description
-          Description="At V Booking, we believe in the power of community to drive growth, collaboration, and innovation in the travel industry.Through a suite of platforms and initiatives, we’re creating an inclusive ecosystem where travel professionals and travelers alike can connect, learn, and succeed together."
-          DescriptionColor="text-grayText"
-          className="text-clamp-[12px,4vw,18px]"
-        />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mt-16">
-        {data.map((item, index) => (
-          <Box
-            key={index}
-            title={item.title}
-            description={item.description}
-            subDescription={item.subDescription}
-            icon={item.icon}
-            index={index}
+      <div className="absolute inset-0 opacity-[.7] bg-gradient-to-b from-[#F7FCFC] to-[#F7E0F8]"></div>
+      <div className="relative z-10">
+        <div className="text-center">
+          <Title
+            title="Bringing the "
+            titleColor="text-secondary"
+            className="text-clamp-[22px,4vw,36px]"
           />
-        ))}
+          <Title
+            title="Travel Community "
+            titleColor="text-primary"
+            className="text-clamp-[22px,4vw,36px]"
+          />
+          <Title
+            title="Together"
+            titleColor="text-secondary"
+            className="text-clamp-[22px,4vw,36px]"
+          />
+          <Description
+            Description="At V Booking, we believe in the power of community to drive growth, collaboration, and innovation in the travel industry.Through a suite of platforms and initiatives, we’re creating an inclusive ecosystem where travel professionals and travelers alike can connect, learn, and succeed together."
+            DescriptionColor="text-grayText"
+            className="text-clamp-[12px,4vw,18px]"
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mt-16">
+          {data.map((item, index) => (
+            <Box
+              key={index}
+              title={item.title}
+              description={item.description}
+              subDescription={item.subDescription}
+              icon={item.icon}
+              index={index}
+            />
+          ))}
+        </div>
       </div>
     </CustomContainer>
   );

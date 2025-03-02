@@ -9,17 +9,17 @@ function Header() {
   return (
     <CustomContainer
       size="lg"
-      className="flex items-center gap-[79px] bg-[#F7FCFC] px-[72px]"
+      className="flex items-center flex-col-reverse lg:flex-row md:gap-[35px] xl:gap-[79px] bg-[#F7FCFC] px-[72px]"
     >
       <div className="flex-1">
         <Title
           title="Empowering Tourism,"
           titleColor="text-primary"
-          className="text-clamp-[22px,6vw,64px] block font-medium"
+          className="text-clamp-[22px,4vw,64px] block font-medium"
         />
         <Title
           title="Elevating Experiences."
-          className="text-clamp-[22px,6vw,64px] font-medium"
+          className="text-clamp-[22px,4vw,64px] font-medium"
           titleColor="text-secondary"
         />
         <Description
@@ -31,7 +31,7 @@ function Header() {
           DescriptionColor="text-text"
           className="text-wrap font-normal text-[12px]"
         />
-        <div className="flex gap-4 mt-6">
+        <div className="flex gap-4 mt-24">
           <Button text="Join our community" className="text-white" />
           <Button
             text="Book Demo"

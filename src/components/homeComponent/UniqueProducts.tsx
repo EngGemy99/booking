@@ -61,7 +61,7 @@ function UniqueProducts() {
         DescriptionColor="text-grayText"
         className="text-clamp-[12px,3vw,16px]"
       />
-      <div className="flex flex-wrap gap-6 mt-6">
+      <div className="flex flex-wrap gap-24 mt-6">
         {UniqueProductsItems.map((item, index) => (
           <Box key={index} title={item.title} icon={item.icon} />
         ))}
