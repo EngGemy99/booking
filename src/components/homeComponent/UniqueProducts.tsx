@@ -1,4 +1,4 @@
-import { CustomContainer } from "@/Wapper/CustomContainer";
+import { CustomContainer } from "@/Wrapper/CustomContainer";
 import React from "react";
 import Title from "../common/Title";
 import Description from "../common/Description";
@@ -10,7 +10,7 @@ import {
   TuRboSearchEngineIcon,
   VBookingHubIcon,
 } from "@/icons";
-import { useTranslations } from "next-intl";
+import ScrollableCards from "../common/ScrollableCards";
 
 const UniqueProductsItems = [
   {
@@ -61,10 +61,19 @@ function UniqueProducts() {
         DescriptionColor="text-grayText"
         className="text-clamp-[12px,3vw,16px]"
       />
-      <div className="flex flex-wrap gap-24 mt-6">
+      <div className="hidden sm:flex flex-wrap gap-24 mt-6">
         {UniqueProductsItems.map((item, index) => (
           <Box key={index} title={item.title} icon={item.icon} />
         ))}
+      </div>
+
+      <div className="block sm:hidden">
+        <ScrollableCards
+          options={UniqueProductsItems}
+          renderCard={(option) => (
+            <Box title={option.title} icon={option.icon} />
+          )}
+        />
       </div>
     </CustomContainer>
   );

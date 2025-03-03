@@ -18,6 +18,5 @@ export const CustomContainer = ({
     xs: "px-[16px]",
   };
 
-  // Return the div with the respective padding class and additional className
-  return <div className={`${className} px-16 md:px-72`}>{children}</div>;
+  return <div className={`px-16 md:px-[72px] ${className} `}>{children}</div>;
 };

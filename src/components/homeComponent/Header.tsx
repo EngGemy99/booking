@@ -1,5 +1,5 @@
 import { images } from "@/assets";
-import { CustomContainer } from "@/Wapper/CustomContainer";
+import { CustomContainer } from "@/Wrapper/CustomContainer";
 import Image from "next/image";
 import Button from "../common/Button";
 import Description from "../common/Description";
@@ -9,7 +9,7 @@ function Header() {
   return (
     <CustomContainer
       size="lg"
-      className="flex items-center flex-col-reverse lg:flex-row md:gap-[35px] xl:gap-[79px] bg-[#F7FCFC] px-[72px]"
+      className="flex items-center flex-col-reverse lg:flex-row md:gap-[35px] xl:gap-[79px] bg-[#F7FCFC]"
     >
       <div className="flex-1">
         <Title

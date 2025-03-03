@@ -8,7 +8,7 @@ import {
   QuotationSystemIcon,
 } from "@/icons";
 import InventoryManagementIcon from "@/icons/src/inventoryManagement";
-import { CustomContainer } from "@/Wapper/CustomContainer";
+import { CustomContainer } from "@/Wrapper/CustomContainer";
 import Description from "../common/Description";
 import Title from "../common/Title";
 

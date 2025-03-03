@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "../common/Title";
 import Description from "../common/Description";
-import { CustomContainer } from "@/Wapper/CustomContainer";
+import { CustomContainer } from "@/Wrapper/CustomContainer";
 import {
   ExhibitionCentersIcon,
   NetworkingPlatformIcon,
@@ -9,6 +9,7 @@ import {
   VBookingHubIcon,
   WorldTravelLibraryIcon,
 } from "@/icons";
+import ScrollableCards from "../common/ScrollableCards";
 
 const data = [
   {
@@ -54,28 +55,30 @@ function TravelCommunity() {
       <div className="absolute inset-0 opacity-[.7] bg-gradient-to-b from-[#F7FCFC] to-[#F7E0F8]"></div>
       <div className="relative z-10">
         <div className="text-center">
-          <Title
-            title="Bringing the "
-            titleColor="text-secondary"
-            className="text-clamp-[22px,4vw,36px]"
-          />
-          <Title
-            title="Travel Community "
-            titleColor="text-primary"
-            className="text-clamp-[22px,4vw,36px]"
-          />
-          <Title
-            title="Together"
-            titleColor="text-secondary"
-            className="text-clamp-[22px,4vw,36px]"
-          />
+          <p>
+            <Title
+              title="Bringing the "
+              titleColor="text-secondary"
+              className="text-clamp-[22px,4vw,36px]"
+            />
+            <Title
+              title="Travel Community "
+              titleColor="text-primary"
+              className="text-clamp-[22px,4vw,36px]"
+            />
+            <Title
+              title="Together"
+              titleColor="text-secondary"
+              className="text-clamp-[22px,4vw,36px]"
+            />
+          </p>
           <Description
             Description="At V Booking, we believe in the power of community to drive growth, collaboration, and innovation in the travel industry.Through a suite of platforms and initiatives, we’re creating an inclusive ecosystem where travel professionals and travelers alike can connect, learn, and succeed together."
             DescriptionColor="text-grayText"
             className="text-clamp-[12px,4vw,18px]"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mt-16">
+        <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mt-16">
           {data.map((item, index) => (
             <Box
               key={index}
@@ -86,6 +89,15 @@ function TravelCommunity() {
               index={index}
             />
           ))}
+        </div>
+
+        <div className="block sm:hidden">
+          <ScrollableCards
+            options={data}
+            renderCard={(option, index) => (
+              <Box index={index} {...option} className="w-[340px] h-[450px]" />
+            )}
+          />
         </div>
       </div>
     </CustomContainer>
@@ -99,8 +111,16 @@ interface BoxProps {
   subDescription?: string;
   icon: React.ReactNode;
   index: number;
+  className?: string;
 }
-const Box = ({ title, description, subDescription, icon, index }: BoxProps) => {
+const Box = ({
+  title,
+  description,
+  subDescription,
+  icon,
+  index,
+  className,
+}: BoxProps) => {
   const gridClasses = [
     "lg:col-span-2 lg:row-span-1",
     "lg:col-span-2 lg:row-span-1 lg:col-start-3",
@@ -110,7 +130,7 @@ const Box = ({ title, description, subDescription, icon, index }: BoxProps) => {
   ];
   return (
     <div
-      className={`p-24 rounded-[24px] bg-white ${gridClasses[index]} sm:col-span-1 md:col-span-1`}
+      className={`p-24 rounded-[24px] bg-white ${gridClasses[index]} sm:col-span-1 md:col-span-1 ${className}`}
     >
       {icon}
       <Title title={title} titleColor="text-primary" className="text-[22px]" />

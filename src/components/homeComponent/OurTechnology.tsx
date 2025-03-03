@@ -1,4 +1,4 @@
-import { CustomContainer } from "@/Wapper/CustomContainer";
+import { CustomContainer } from "@/Wrapper/CustomContainer";
 import React from "react";
 import Title from "../common/Title";
 import Description from "../common/Description";

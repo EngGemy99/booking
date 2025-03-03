@@ -20,8 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
+  // Check if locale is available in localStorage
+  const sysLocale =
+    typeof window !== "undefined" && localStorage.getItem("locale")
+      ? localStorage.getItem("locale") || "en"
+      : locale;
+
   return (
-    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+    <html lang={sysLocale} dir={sysLocale === "ar" ? "rtl" : "ltr"}>
       <body className={font.className}>{children}</body>
     </html>
   );

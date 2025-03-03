@@ -1,10 +1,11 @@
-import { CustomContainer } from "@/Wapper/CustomContainer";
+import { CustomContainer } from "@/Wrapper/CustomContainer";
 import React from "react";
 import Title from "../common/Title";
 import Description from "../common/Description";
 import Image, { StaticImageData } from "next/image";
 import Button from "../common/Button";
 import { images } from "@/assets";
+import ScrollableCards from "../common/ScrollableCards";
 
 const items = [
   {
@@ -53,10 +54,19 @@ function TurboBookingSuite() {
           className="text-[12px]"
         />
       </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 mt-10">
+      <div className="hidden sm:grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 mt-10">
         {items.map((item, index) => (
           <Box key={index} {...item} />
         ))}
+      </div>
+
+      <div className="block sm:hidden">
+        <ScrollableCards
+          options={items}
+          renderCard={(option) => (
+            <Box className="w-[338px] h-[450px]" {...option} />
+          )}
+        />
       </div>
     </CustomContainer>
   );
@@ -68,17 +78,20 @@ interface BoxProps {
   title: string;
   image: StaticImageData;
   description: string;
+  className?: string;
 }
 
-const Box = ({ title, image, description }: BoxProps) => {
+const Box = ({ title, image, description, className }: BoxProps) => {
   return (
-    <div className="bg-white p-[16px] flex items-center justify-center flex-col rounded-[16px]">
+    <div
+      className={`bg-white p-[16px] flex items-center justify-center flex-col rounded-[16px] ${className}`}
+    >
       <Image src={image} alt={title} className="mb-16" />
 
       <Title
         title={title}
         titleColor="text-secondary"
-        className="text-wrap text-center font-semibold text-22"
+        className="text-wrap text-center font-semibold text-clamp-[16px,3vw,22px]"
       />
       <Description
         Description={description}
