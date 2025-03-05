@@ -88,9 +88,9 @@ function WhyTuRbo() {
           />
         </div>
 
-        <div className="grid grid-cols-1 gap-8 mt-16 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mt-16">
           {items.map((item, index) => (
-            <Box key={index} {...item} />
+            <Box key={index} index={index} {...item} />
           ))}
         </div>
       </div>
@@ -104,10 +104,23 @@ interface BoxProps {
   title: string;
   description: string;
   icon: React.ReactNode;
+  index: number;
 }
-const Box = ({ title, description, icon }: BoxProps) => {
+const Box = ({ title, description, icon, index }: BoxProps) => {
+  const gridClasses = [
+    "lg:col-span-2 lg:row-span-1", // div1
+    "lg:col-span-2 lg:row-span-1 lg:col-start-3", // div2
+    "lg:col-span-2 lg:row-span-1 lg:col-start-5", // div3
+    "lg:col-span-2 lg:row-span-1 lg:col-start-1 lg:row-start-2", // div4
+    "lg:col-span-2 lg:row-span-1 lg:col-start-3 lg:row-start-2", // div5
+    "lg:col-span-2 lg:row-span-1 lg:col-start-5 lg:row-start-2", // div6
+    "lg:col-span-2 lg:row-span-1 lg:col-start-2 lg:row-start-3", // div7
+    "lg:col-span-2 lg:row-span-1 lg:col-start-4 lg:row-start-3", // div8
+  ];
   return (
-    <div className="flex items-center flex-col text-center space-x-4 bg-white p-16 rounded-[20px]">
+    <div
+      className={`flex items-center flex-col text-center ${gridClasses[index]} space-x-4 bg-white p-16 rounded-[20px] sm:col-span-1 md:col-span-1`}
+    >
       <div>{icon}</div>
       <div>
         <Title

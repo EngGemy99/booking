@@ -2,20 +2,11 @@ import * as React from "react";
 
 function Index(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg
-      width={24}
-      height={24}
-      fill="none"
-      color="currentColor"
-      {...props}
-      style={{
-        transform: "scale(.8)",
-      }}
-    >
+    <svg width={20} height={20} fill="none" {...props}>
       <path
-        d="M19 4.992l-15 15M5.5 4.992H19v13.5"
-        stroke="currentColor"
-        strokeWidth={2}
+        d="M5 7.5l5 5 5-5"
+        stroke="#fff"
+        strokeWidth={1.667}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -23,5 +14,5 @@ function Index(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-const ArrowButtonIcon = React.memo(Index);
-export { ArrowButtonIcon };
+const ArrowButton = React.memo(Index);
+export { ArrowButton };

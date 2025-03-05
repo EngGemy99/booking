@@ -14,31 +14,31 @@ import ScrollableCards from "../common/ScrollableCards";
 
 const UniqueProductsItems = [
   {
-    title: "home.TuRbo_Search_Engine",
+    title: "home.unique_products.turbo_search_engine",
     icon: <TuRboSearchEngineIcon />,
   },
   {
-    title: "home.AI_Travel_Agent",
+    title: "home.unique_products.ai_travel_agent",
     icon: <AITravelAgentIcon />,
   },
   {
-    title: "home.Engagement_Holiday_Builder",
+    title: "home.unique_products.engagement_holiday_builder",
     icon: <EngagementHolidayBuilderIcon />,
   },
   {
-    title: "home.Turbo_Travel_CRM",
+    title: "home.unique_products.turbo_travel_crm",
     icon: <TuRboSearchEngineIcon />,
   },
   {
-    title: "home.Live_Booking_Desk",
+    title: "home.unique_products.live_booking_desk",
     icon: <LiveBookingDeskIcon />,
   },
   {
-    title: "home.Operator_App",
+    title: "home.unique_products.operator_app",
     icon: <OperatorAppIcon />,
   },
   {
-    title: "home.VBooking_Hub",
+    title: "home.unique_products.vbooking_hub",
     icon: <VBookingHubIcon />,
   },
 ];
@@ -47,17 +47,17 @@ function UniqueProducts() {
   return (
     <CustomContainer size="lg" className="pt-16">
       <Title
-        title="home.Our"
+        title="common.our"
         titleColor="text-secondary"
         className="text-clamp-[22px,4vw,28px]"
       />
       <Title
-        title="home.Unique_Products"
+        title="home.unique_products.unique_products"
         titleColor="text-primary"
         className="text-clamp-[22px,4vw,28px]"
       />
       <Description
-        Description="home.Crafting_Unique_Products_from_Innovative_Technology"
+        Description="home.unique_products.crafting_unique_products_from_innovative_technology"
         DescriptionColor="text-grayText"
         className="text-clamp-[12px,3vw,16px]"
       />

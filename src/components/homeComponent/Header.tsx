@@ -13,28 +13,31 @@ function Header() {
     >
       <div className="flex-1">
         <Title
-          title="Empowering Tourism,"
+          title="home.header.empowering_tourism"
           titleColor="text-primary"
           className="text-clamp-[22px,4vw,64px] block font-medium"
         />
         <Title
-          title="Elevating Experiences."
+          title="home.header.elevating_experiences"
           className="text-clamp-[22px,4vw,64px] font-medium"
           titleColor="text-secondary"
         />
         <Description
-          Description="VBooking: Your Partner in Seamless Travel Solutions."
+          Description="home.header.vbooking_your_partner_in_seamless_travel_solutions"
           DescriptionColor="text-text mb-[6px]"
         />
         <Description
-          Description="Revolutionizing global travel with cutting-edge AI and automated systems, we empower your business with innovative tools and seamless all-in-one solutions, driving ultimate efficiency, innovation, and success in the digital age."
+          Description="home.header.revolutionizing_global_travel_with_cutting_edge_ai"
           DescriptionColor="text-text"
           className="text-wrap font-normal text-[12px]"
         />
         <div className="flex gap-4 mt-24">
-          <Button text="Join our community" className="text-white" />
           <Button
-            text="Book Demo"
+            text="home.header.join_our_community"
+            className="text-white"
+          />
+          <Button
+            text="common.book_demo"
             className="border-primary border bg-white text-primary"
           />
         </div>

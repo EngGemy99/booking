@@ -9,28 +9,27 @@ import ScrollableCards from "../common/ScrollableCards";
 
 const items = [
   {
-    title: "TWholesale Tour Operators (B2B)+(B2C)",
+    title: "home.booking_suite.wholesale_tour_operators_b2b_b2c",
     image: images.laptop,
-    description:
-      "Automate operations, manage inventories, and create tailored packages for greater efficiency and growth.",
+    description: "home.booking_suite.automate_operations_manage_inventories",
   },
   {
-    title: "Incoming Agencies (DMCs)",
+    title: "home.booking_suite.incoming_agencies_dmcs",
     image: images.laptop,
     description:
-      "Improve customer satisfaction with fast searches, AI recommendations, and a wide selection of travel products.",
+      "home.booking_suite.improve_customer_satisfaction_with_fast_searches",
   },
   {
-    title: "Online Travel Agencies (OTAs)",
+    title: "home.booking_suite.online_travel_agencies_otas",
     image: images.laptop,
     description:
-      "Improve customer satisfaction with fast searches, AI recommendations, and a wide selection of travel products.",
+      "home.booking_suite.improve_customer_satisfaction_with_fast_searches",
   },
   {
-    title: "Holiday Rental Managers",
+    title: "home.booking_suite.holiday_rental_managers",
     image: images.laptop,
     description:
-      "Streamline bookings, pricing, and guest communication to maximize occupancy and enhance guest experiences.",
+      "home.booking_suite.streamline_bookings_pricing_guest_communication",
   },
 ];
 
@@ -39,17 +38,17 @@ function TurboBookingSuite() {
     <CustomContainer size="lg" className="pt-[44px]">
       <div className="text-center">
         <Title
-          title="Turbo"
+          title="common.turbo"
           titleColor="text-secondary"
           className="text-clamp-[22px,4vw,36px]"
         />{" "}
         <Title
-          title="Booking Suite"
+          title="home.booking_suite.booking_suite"
           titleColor="text-primary"
           className="text-clamp-[22px,4vw,36px]"
         />
         <Description
-          Description="Empower your business with an advanced platform designed to receive and manage bookings online. Streamline reservation processes, improve client experiences, and seamlessly handle inquiries, ensuring your business stays competitive in the digital travel landscape."
+          Description="home.booking_suite.empower_your_business_with_advanced_platform"
           DescriptionColor="text-grayText"
           className="text-[12px]"
         />
@@ -100,10 +99,10 @@ const Box = ({ title, image, description, className }: BoxProps) => {
       />
       <div className="mt-24 flex gap-16">
         <Button
-          text="Learn More"
+          text="common.learn_more"
           className="border border-[#D0D5DD] text-black bg-white"
         />
-        <Button text="Book Demo" className="text-white" />
+        <Button text="common.book_demo" className="text-white" />
       </div>
     </div>
   );

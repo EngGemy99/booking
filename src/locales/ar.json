@@ -1,15 +1,48 @@
 {
+  "common": {
+    "our": "خاصتنا",
+    "turbo": "تيربو",
+    "book_demo": "حجز عرض توضيحي",
+    "learn_more": "تعرف أكثر"
+  },
   "home": {
-    "title": "مرحبا بالعالم!",
-    "Our": "ملكنا",
-    "Unique_Products": "منتجاتنا الفريدة",
-    "Crafting_Unique_Products_from_Innovative_Technology": "صناعة منتجات فريدة من التكنولوجيا المبتكرة",
-    "TuRbo_Search_Engine": "محرك البحث توربو",
-    "AI_Travel_Agent": "وكيل السفر الذكي",
-    "Live_Booking_Desk": "مكتب الحجز المباشر",
-    "Operator_App": "مشغل تطبيق",
-    "VBooking_Hub": "مركز حجز V",
-    "Innovative_Technology": "التكنولوجيا المبتكرة",
-    "A_Transformation_from_Traditional_to_Advanced_Technology": "تحول من التكنولوجيا التقليدية إلى التكنولوجيا المتقدمة"
+    "navbar": {
+      "turbo": "تيربو",
+      "our_technology": "تقنيتنا",
+      "our_product": "منتجاتنا",
+      "why_us": "لماذا نحن",
+      "contacts": "الاتصال",
+      "resources": "الموارد",
+      "login": "تسجيل الدخول"
+    },
+    "header": {
+      "empowering_tourism": "تمكين السياحة",
+      "elevating_experiences": "رفع التجارب.",
+      "vbooking_your_partner_in_seamless_travel_solutions": "VBooking: شريكك في حلول السفر السلسة.",
+      "revolutionizing_global_travel_with_cutting_edge_ai": "نحن نحدث ثورة في السفر العالمي باستخدام الذكاء الاصطناعي المتقدم والأنظمة المؤتمتة، حيث نمكّن عملك من أدوات مبتكرة وحلول شاملة ومتطورة، مما يعزز الكفاءة والابتكار والنجاح في العصر الرقمي.",
+      "join_our_community": "انضم إلى مجتمعنا"
+    },
+    "unique_products": {
+      "unique_products": "منتجات فريدة",
+      "crafting_unique_products_from_innovative_technology": "صناعة منتجات فريدة من التكنولوجيا المبتكرة",
+      "turbo_search_engine": "محرك بحث TuRbo",
+      "ai_travel_agent": "وكيل السفر الذكي",
+      "engagement_holiday_builder": "باني العطلات التفاعلية",
+      "turbo_travel_crm": "نظام إدارة علاقات العملاء للسفر Turbo",
+      "live_booking_desk": "مكتب الحجز المباشر",
+      "operator_app": "تطبيق المشغل",
+      "vbooking_hub": "مركز VBooking"
+    },
+    "booking_suite": {
+      "booking_suite": "جناح الحجز",
+      "empower_your_business_with_advanced_platform": "قم بتمكين عملك من خلال منصة متقدمة مصممة لاستقبال وإدارة الحجوزات عبر الإنترنت. سهل عمليات الحجز، وحسن تجارب العملاء، وتعامل بسلاسة مع الاستفسارات، مما يضمن بقاء عملك تنافسيًا في مشهد السفر الرقمي.",
+      "wholesale_tour_operators_b2b_b2c": "منظمو الجولات بالجملة (B2B) + (B2C)",
+      "incoming_agencies_dmcs": "الوكالات الواردة (DMCs)",
+      "online_travel_agencies_otas": "وكالات السفر عبر الإنترنت (OTAs)",
+      "holiday_rental_managers": "مديرو تأجير العطلات",
+      "automate_operations_manage_inventories": "أتمتة العمليات، إدارة المخزونات، وإنشاء حزم مخصصة لزيادة الكفاءة والنمو.",
+      "improve_customer_satisfaction_with_fast_searches": "تحسين رضا العملاء من خلال البحث السريع، التوصيات الذكية، واختيار واسع من منتجات السفر.",
+      "streamline_bookings_pricing_guest_communication": "تبسيط الحجوزات، التسعير، والتواصل مع الضيوف لزيادة الإشغال وتحسين تجارب الضيوف."
+    }
   }
 }

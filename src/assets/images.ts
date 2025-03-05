@@ -1,4 +1,5 @@
 import logo from "@/assets/images/logo.png";
+import footerLogo from "@/assets/images/footerLogo.png";
 import headerImage from "@/assets/images/headerImage.png";
 import laptop from "@/assets/images/laptop.png";
 import InnovativeTechnology1 from "@/assets/images/InnovativeTechnology 1.png";
@@ -12,6 +13,10 @@ import OurPartners1 from "@/assets/images/OurPartners1.png";
 import OurPartners2 from "@/assets/images/OurPartners2.png";
 import OurPartners3 from "@/assets/images/OurPartners3.png";
 import OurPartners4 from "@/assets/images/OurPartners4.png";
+import payment1 from "@/assets/images/payment1.png";
+import payment2 from "@/assets/images/payment2.png";
+import payment3 from "@/assets/images/payment3.png";
+import EnFlag from "@/assets/images/en-flag.png";
 
 export default {
   logo,
@@ -28,4 +33,9 @@ export default {
   OurPartners2,
   OurPartners3,
   OurPartners4,
+  footerLogo,
+  payment1,
+  payment2,
+  payment3,
+  EnFlag,
 };

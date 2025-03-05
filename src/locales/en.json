@@ -1,17 +1,52 @@
 {
+  "common": {
+    "our": "Our",
+    "turbo": "Turbo",
+    "book_demo": "Book Demo",
+    "learn_more": "Learn More"
+  },
   "home": {
-    "title": "Hello world!",
-    "Our": "Our",
-    "Unique_Products": "Unique Products",
-    "Crafting_Unique_Products_from_Innovative_Technology": "Crafting Unique Products from Innovative Technology",
-    "TuRbo_Search_Engine": "TuRbo Search Engine",
-    "AI_Travel_Agent": "AI Travel Agent",
-    "Engagement_Holiday_Builder": "Engagement Holiday Builder",
-    "Turbo_Travel_CRM": "Turbo Travel CRM",
-    "Live_Booking_Desk": "Live Booking Desk",
-    "Operator_App": "Operator App",
-    "VBooking_Hub": "VBooking Hub",
-    "Innovative_Technology": "Innovative Technology",
-    "A_Transformation_from_Traditional_to_Advanced_Technology": "A Transformation from Traditional to Advanced Technology"
+    "navbar": {
+      "turbo": "TuRbo",
+      "our_technology": "Our Technology",
+      "our_product": "Our Product",
+      "why_us": "Why Us",
+      "contacts": "Contacts",
+      "resources": "Resources",
+      "login": "Login",
+      "empowering_tourism": "Empowering Tourism",
+      "elevating_experiences": "Elevating Experiences.",
+      "join_our_community": "Join our community",
+      "book_demo": "Book Demo"
+    },
+    "header": {
+      "empowering_tourism": "Empowering Tourism",
+      "elevating_experiences": "Elevating Experiences.",
+      "vbooking_your_partner_in_seamless_travel_solutions": "VBooking: Your Partner in Seamless Travel Solutions.",
+      "revolutionizing_global_travel_with_cutting_edge_ai": "Revolutionizing global travel with cutting-edge AI and automated systems, we empower your business with innovative tools and seamless all-in-one solutions, driving ultimate efficiency, innovation, and success in the digital age.",
+      "join_our_community": "Join our community"
+    },
+    "unique_products": {
+      "unique_products": "Unique Products",
+      "crafting_unique_products_from_innovative_technology": "Crafting Unique Products from Innovative Technology",
+      "turbo_search_engine": "TuRbo Search Engine",
+      "ai_travel_agent": "AI Travel Agent",
+      "engagement_holiday_builder": "Engagement Holiday Builder",
+      "turbo_travel_crm": "Turbo Travel CRM",
+      "live_booking_desk": "Live Booking Desk",
+      "operator_app": "Operator App",
+      "vbooking_hub": "VBooking Hub"
+    },
+    "booking_suite": {
+      "booking_suite": "Booking Suite",
+      "empower_your_business_with_advanced_platform": "Empower your business with an advanced platform designed to receive and manage bookings online. Streamline reservation processes, improve client experiences, and seamlessly handle inquiries, ensuring your business stays competitive in the digital travel landscape.",
+      "wholesale_tour_operators_b2b_b2c": "Wholesale Tour Operators (B2B) + (B2C)",
+      "incoming_agencies_dmcs": "Incoming Agencies (DMCs)",
+      "online_travel_agencies_otas": "Online Travel Agencies (OTAs)",
+      "holiday_rental_managers": "Holiday Rental Managers",
+      "automate_operations_manage_inventories": "Automate operations, manage inventories, and create tailored packages for greater efficiency and growth.",
+      "improve_customer_satisfaction_with_fast_searches": "Improve customer satisfaction with fast searches, AI recommendations, and a wide selection of travel products.",
+      "streamline_bookings_pricing_guest_communication": "Streamline bookings, pricing, and guest communication to maximize occupancy and enhance guest experiences."
+    }
   }
 }

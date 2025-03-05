@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
 import "./globals.css";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,22 +17,32 @@ const font = Poppins({
   subsets: ["latin"], // Optionally add subsets if needed
 });
 
-export default function RootLayout({
-  children,
-  params: { locale },
-}: Readonly<{
+type Props = {
   children: React.ReactNode;
-  params: { locale: string };
-}>) {
-  // Check if locale is available in localStorage
-  const sysLocale =
-    typeof window !== "undefined" && localStorage.getItem("locale")
-      ? localStorage.getItem("locale") || "en"
-      : locale;
+  params: Promise<{ locale: string }>;
+};
+export default async function RootLayout({ children, params }: Props) {
+  const { locale } = await params;
+
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages();
 
   return (
-    <html lang={sysLocale} dir={sysLocale === "ar" ? "rtl" : "ltr"}>
-      <body className={font.className}>{children}</body>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+      <body className={font.className}>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }
