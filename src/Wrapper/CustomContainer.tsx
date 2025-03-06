@@ -10,9 +10,7 @@ export const CustomContainer = ({
   children,
 }: CustomContainerProps) => {
   return (
-    <div
-      className={`px-16 md:px-32 xl:px-72 2xl:px-250 py-24 xl:py-30 2xl:py-40 ${className}`}
-    >
+    <div className={`px-16 md:px-32 xl:px-72 2xl:px-250  ${className}`}>
       {children}
     </div>
   );
