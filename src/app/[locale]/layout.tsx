@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 const font = Poppins({
   weight: ["400", "700"],
   subsets: ["latin"], // Optionally add subsets if needed
+  variable: "--font-poppins",
 });
 
 type Props = {
@@ -37,8 +38,12 @@ export default async function RootLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
-      <body className={font.className}>
+    <html
+      lang={locale}
+      dir={locale === "ar" ? "rtl" : "ltr"}
+      className={`${font.variable}`}
+    >
+      <body className="font-poppins">
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

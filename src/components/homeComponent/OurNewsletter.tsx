@@ -6,7 +6,7 @@ import { CustomContainer } from "@/Wrapper/CustomContainer";
 
 function OurNewsletter() {
   return (
-    <CustomContainer size="lg" className="py-[44px]">
+    <CustomContainer className="py-[44px]">
       <div className="bg-primary w-[90%] lg:w-[879px] mx-auto text-center p-32 rounded-[24px]">
         <Title
           title="Join Our Newsletter"

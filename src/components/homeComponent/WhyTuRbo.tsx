@@ -65,7 +65,6 @@ const items = [
 function WhyTuRbo() {
   return (
     <CustomContainer
-      size="lg"
       className="
     mt-[44px] "
     >
@@ -82,7 +81,12 @@ function WhyTuRbo() {
             className="text-clamp-[22px,4vw,36px]"
           />
           <Description
-            Description="Empower your business with an advanced platform designed to receive and manage bookings online.Streamline reservation processes, improve client experiences, and seamlessly handle inquiries, ensuring your business stays competitive in the digital travel landscape."
+            Description="Empower your business with an advanced platform designed to receive and manage bookings online."
+            DescriptionColor="text-grayText"
+            className="text-[12px]"
+          />
+          <Description
+            Description="Streamline reservation processes, improve client experiences, and seamlessly handle inquiries, ensuring your business stays competitive in the digital travel landscape."
             DescriptionColor="text-grayText"
             className="text-[12px]"
           />

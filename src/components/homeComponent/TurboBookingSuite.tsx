@@ -35,7 +35,7 @@ const items = [
 
 function TurboBookingSuite() {
   return (
-    <CustomContainer size="lg" className="pt-[44px]">
+    <CustomContainer className="pt-[44px]">
       <div className="text-center">
         <Title
           title="common.turbo"

@@ -5,7 +5,7 @@ function Index(props: React.SVGProps<SVGSVGElement>) {
     <svg width={20} height={20} fill="none" {...props}>
       <path
         d="M5 7.5l5 5 5-5"
-        stroke="#fff"
+        stroke="currentColor"
         strokeWidth={1.667}
         strokeLinecap="round"
         strokeLinejoin="round"

@@ -6,8 +6,13 @@ import React from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Button from "./Button";
 import Title from "./Title";
+import { ArrowButton } from "@/icons";
 
-const links = [
+type LinkType = {
+  title: string;
+  dropdownItems?: { title: string; url: string }[];
+};
+const links: LinkType[] = [
   {
     title: "home.navbar.turbo",
     dropdownItems: [
@@ -37,21 +42,9 @@ const links = [
   },
   {
     title: "home.navbar.why_us",
-    dropdownItems: [
-      {
-        title: "AI and Machine Learning",
-        url: "",
-      },
-    ],
   },
   {
     title: "home.navbar.contacts",
-    dropdownItems: [
-      {
-        title: "AI and Machine Learning",
-        url: "",
-      },
-    ],
   },
   {
     title: "home.navbar.resources",
@@ -66,7 +59,7 @@ const links = [
 
 function NavBar() {
   return (
-    <CustomContainer size="lg" className="mt-[36px]">
+    <CustomContainer className="mt-[36px]">
       <header className="bg-white h-[80px]">
         <div className=" flex items-center gap-48">
           <a href="#">
@@ -80,9 +73,11 @@ function NavBar() {
                   <li key={index}>
                     <Link
                       href="#"
-                      className="text-gray-600 hover:text-secondary transition text-[16px]"
+                      className="flex items-center gap-4 text-gray-600 hover:text-secondary transition text-[16px]"
                     >
                       <Title title={link.title} titleColor="" />
+                      {link?.dropdownItems &&
+                        link?.dropdownItems?.length > 0 && <ArrowButton />}
                     </Link>
                   </li>
                 ))}

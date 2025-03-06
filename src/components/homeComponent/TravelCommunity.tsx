@@ -10,20 +10,37 @@ import {
   WorldTravelLibraryIcon,
 } from "@/icons";
 import ScrollableCards from "../common/ScrollableCards";
+import Button from "../common/Button";
 
 const data = [
   {
     title: "Networking Platform",
     description:
-      "Our Networking Platform is designed for agents, experts, and travelers to connect, collaborate, and thrive together. It offers a dynamic space to attend events, socialize, gain new skills, and expand professional networks.",
+      "The VBooking Academy empowers agents and experts with the skills and knowledge needed to excel. Courses cover essential areas like: Travel Industry Education, Destination Knowledge, Using V Booking Tools, Marketing & Sales Training",
     subDescription: "Join Our community as a",
     icon: <NetworkingPlatformIcon />,
+    buttons: [
+      {
+        title: "Traveler",
+      },
+      {
+        title: "Travel Expert",
+      },
+      {
+        title: "Travel Agent",
+      },
+    ],
   },
   {
     title: "VBooking Academy",
     description:
       "The VBooking Academy empowers agents and experts with the skills and knowledge needed to excel. Courses cover essential areas like: Travel Industry Education, Destination Knowledge, Using V Booking Tools, Marketing & Sales Training",
     icon: <VBookingAcademyIcon />,
+    buttons: [
+      {
+        title: "Enroll in VBooking Academy",
+      },
+    ],
   },
   {
     title: "Exhibition Centers",
@@ -31,27 +48,39 @@ const data = [
       "Our Exhibition Centers in the Metaverse provide unique opportunities to network and discover. These virtual exhibitions connect agents, suppliers, experts, and travelers to explore new destinations and foster partnerships in a fully immersive environment.",
     subDescription: "Explore Virtual Exhibitions as a Travel Expert",
     icon: <ExhibitionCentersIcon />,
+    buttons: [
+      {
+        title: "Register as an Exhibitor",
+      },
+    ],
   },
   {
     title: "World Travel Library",
     description:
       "The World Travel Library is an expert-level encyclopedia offering insights on global destinations. Whether you’re a traveler seeking inspiration or an agent expanding expertise, this library has it all.",
     icon: <WorldTravelLibraryIcon />,
+    buttons: [
+      {
+        title: "Explore the World Travel Library",
+      },
+    ],
   },
   {
     title: "VBooking Hub",
     description:
       "The VBooking Hub is a secure marketplace designed for agents to manage transactions, customize pricing, and access a wide range of travel products. Ideal for creating unique client experiences.",
     icon: <VBookingHubIcon width={100} height={100} />,
+    buttons: [
+      {
+        title: "Access the VBooking Hub as a Travel Agent",
+      },
+    ],
   },
 ];
 
 function TravelCommunity() {
   return (
-    <CustomContainer
-      size="lg"
-      className="bg-[url(../../assets/images/TravelCommunityBg.jpg)] bg-cover bg-center pt-[64px] mt-[32px] relative pb-[3rem]"
-    >
+    <CustomContainer className="bg-[url(../../assets/images/TravelCommunityBg.jpg)] bg-cover bg-center pt-[64px] mt-[32px] relative pb-[3rem]">
       <div className="absolute inset-0 opacity-[.7] bg-gradient-to-b from-[#F7FCFC] to-[#F7E0F8]"></div>
       <div className="relative z-10">
         <div className="text-center">
@@ -87,6 +116,7 @@ function TravelCommunity() {
               subDescription={item.subDescription}
               icon={item.icon}
               index={index}
+              buttons={item.buttons}
             />
           ))}
         </div>
@@ -95,7 +125,11 @@ function TravelCommunity() {
           <ScrollableCards
             options={data}
             renderCard={(option, index) => (
-              <Box index={index} {...option} className="w-[340px] h-[450px]" />
+              <Box
+                index={index}
+                {...option}
+                className="w-[340px] min-h-[450px]"
+              />
             )}
           />
         </div>
@@ -112,6 +146,7 @@ interface BoxProps {
   icon: React.ReactNode;
   index: number;
   className?: string;
+  buttons: { title: string }[];
 }
 const Box = ({
   title,
@@ -120,6 +155,7 @@ const Box = ({
   icon,
   index,
   className,
+  buttons,
 }: BoxProps) => {
   const gridClasses = [
     "lg:col-span-2 lg:row-span-1",
@@ -139,13 +175,24 @@ const Box = ({
         DescriptionColor="text-grayText"
         className="text-[14px]"
       />
-      {subDescription && (
-        <Description
-          Description={subDescription}
-          DescriptionColor="text-secondary"
-          className="text-[14px] mt-20"
-        />
-      )}
+      {/* {subDescription && ( */}
+      <Description
+        Description={subDescription || ""}
+        DescriptionColor="text-secondary h-[24px]"
+        className="text-[14px] mt-20"
+      />
+      {/* )} */}
+      <div className="flex flex-wrap gap-3">
+        {buttons.map((button, index) => (
+          <Button
+            key={index}
+            className={`bg-white text-primary border border-primary flex-1 rounded-[50px] text-[12px] md:text-[18px] md:px-8 md:py-2 ${
+              index === buttons.length - 1 ? "flex-auto md:flex-1" : ""
+            }`}
+            text={button.title}
+          />
+        ))}
+      </div>
     </div>
   );
 };

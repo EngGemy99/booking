@@ -13,7 +13,7 @@ const data = [
 ];
 function OurPartners() {
   return (
-    <CustomContainer size="lg" className="py-32">
+    <CustomContainer className="py-32">
       <div className="relative z-10">
         <div className="text-center">
           <Title

@@ -45,7 +45,7 @@ const UniqueProductsItems = [
 
 function UniqueProducts() {
   return (
-    <CustomContainer size="lg" className="pt-16">
+    <CustomContainer className="pt-16">
       <Title
         title="common.our"
         titleColor="text-secondary"

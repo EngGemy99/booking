@@ -45,7 +45,7 @@ const items = [
 ];
 function InnovativeTechnology() {
   return (
-    <CustomContainer size="lg" className="pt-[44px]">
+    <CustomContainer className="pt-[44px]">
       <div className="text-center">
         <Title
           title="home.Our"

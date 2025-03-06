@@ -39,6 +39,7 @@ const config: Config = {
         "32": "32px",
         "48": "48px",
         "72": "72px",
+        "250": "250px",
       },
       fontSize: {
         "22": "22px",

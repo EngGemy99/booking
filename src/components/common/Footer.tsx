@@ -205,7 +205,7 @@ const socialLinks = [
 function Footer() {
   return (
     <footer className="bg-[#224A9A]">
-      <CustomContainer size="lg" className="pt-[44px] pb24">
+      <CustomContainer className="pt-[44px] pb24">
         <div>
           <div className="mb-32">
             <Image src={images.footerLogo} alt="logo" />

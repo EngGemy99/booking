@@ -4,6 +4,7 @@
 
 body {
   text-wrap: wrap;
+  font-family: poppins;
 }
 
 @layer utilities {
