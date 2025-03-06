@@ -59,7 +59,7 @@ const links: LinkType[] = [
 
 function NavBar() {
   return (
-    <CustomContainer className="mt-[36px]">
+    <CustomContainer className="mt-[36px] !py-0">
       <header className="bg-white h-[80px]">
         <div className=" flex items-center gap-48">
           <a href="#">

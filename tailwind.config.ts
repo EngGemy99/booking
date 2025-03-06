@@ -30,13 +30,16 @@ const config: Config = {
       },
       spacing: {
         "6": "6px",
+        "8": "8px",
         "10": "10px",
         "12": "12px",
+        "14": "14px",
         "16": "16px",
         "18": "18px",
         "20": "20px",
         "24": "24px",
         "32": "32px",
+        "40": "40px",
         "48": "48px",
         "72": "72px",
         "250": "250px",
@@ -52,6 +55,7 @@ const config: Config = {
     function ({ matchUtilities }: { matchUtilities: any }) {
       const clampUtilities = {
         "text-clamp": createClampUtility("fontSize"),
+        "w-clamp": createClampUtility("width"),
       };
       matchUtilities(clampUtilities, {
         values: {},

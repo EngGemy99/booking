@@ -61,7 +61,7 @@ function UniqueProducts() {
         DescriptionColor="text-grayText"
         className="text-clamp-[12px,3vw,16px]"
       />
-      <div className="hidden sm:flex flex-wrap gap-24 mt-6">
+      <div className="hidden sm:flex flex-wrap gap-24 mt-24">
         {UniqueProductsItems.map((item, index) => (
           <Box key={index} title={item.title} icon={item.icon} />
         ))}
@@ -83,7 +83,7 @@ export default UniqueProducts;
 
 const Box = ({ title, icon }: any) => {
   return (
-    <div className="bg-white p-[16px] rounded-[16px] flex flex-col justify-center items-center gap-4 flex-1 min-w-[200px]   ">
+    <div className="bg-white p-[16px] rounded-[16px] flex flex-col justify-center items-center gap-4 flex-1 w-[144px] md:w-[174px]   ">
       {icon}
       <Title
         title={title}

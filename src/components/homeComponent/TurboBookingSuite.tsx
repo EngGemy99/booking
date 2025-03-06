@@ -48,12 +48,17 @@ function TurboBookingSuite() {
           className="text-clamp-[22px,4vw,36px]"
         />
         <Description
-          Description="home.booking_suite.empower_your_business_with_advanced_platform"
+          Description="Empower your business with an advanced platform designed to receive and manage bookings online. Streamline reservation processes,"
+          DescriptionColor="text-grayText"
+          className="text-[12px]"
+        />
+        <Description
+          Description="improve client experiences, and seamlessly handle inquiries, ensuring your business stays competitive in the digital travel landscape."
           DescriptionColor="text-grayText"
           className="text-[12px]"
         />
       </div>
-      <div className="hidden sm:grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 mt-10">
+      <div className="hidden sm:grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 mt-24">
         {items.map((item, index) => (
           <Box key={index} {...item} />
         ))}

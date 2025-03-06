@@ -102,12 +102,17 @@ function TravelCommunity() {
             />
           </p>
           <Description
-            Description="At V Booking, we believe in the power of community to drive growth, collaboration, and innovation in the travel industry.Through a suite of platforms and initiatives, we’re creating an inclusive ecosystem where travel professionals and travelers alike can connect, learn, and succeed together."
+            Description="At V Booking, we believe in the power of community to drive growth, collaboration, and innovation in the travel industry."
             DescriptionColor="text-grayText"
-            className="text-clamp-[12px,4vw,18px]"
+            className="text-[12px]"
+          />
+          <Description
+            Description="Through a suite of platforms and initiatives, we’re creating an inclusive ecosystem where travel professionals and travelers alike can connect, learn, and succeed together."
+            DescriptionColor="text-grayText"
+            className="text-[12px]"
           />
         </div>
-        <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mt-16">
+        <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mt-24">
           {data.map((item, index) => (
             <Box
               key={index}
@@ -166,7 +171,7 @@ const Box = ({
   ];
   return (
     <div
-      className={`p-24 rounded-[24px] bg-white ${gridClasses[index]} sm:col-span-1 md:col-span-1 ${className}`}
+      className={`p-24 rounded-[24px] bg-white space-y-8 ${gridClasses[index]} sm:col-span-1 md:col-span-1 ${className}`}
     >
       {icon}
       <Title title={title} titleColor="text-primary" className="text-[22px]" />
@@ -175,18 +180,16 @@ const Box = ({
         DescriptionColor="text-grayText"
         className="text-[14px]"
       />
-      {/* {subDescription && ( */}
       <Description
         Description={subDescription || ""}
         DescriptionColor="text-secondary h-[24px]"
         className="text-[14px] mt-20"
       />
-      {/* )} */}
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-3 mt-8">
         {buttons.map((button, index) => (
           <Button
             key={index}
-            className={`bg-white text-primary border border-primary flex-1 rounded-[50px] text-[12px] md:text-[18px] md:px-8 md:py-2 ${
+            className={`bg-white text-primary border border-primary flex-1 rounded-[50px] text-[12px] md:text-[14px] md:px-8 md:py-2 ${
               index === buttons.length - 1 ? "flex-auto md:flex-1" : ""
             }`}
             text={button.title}
