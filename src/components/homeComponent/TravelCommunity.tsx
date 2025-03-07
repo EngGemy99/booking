@@ -14,65 +14,60 @@ import Button from "../common/Button";
 
 const data = [
   {
-    title: "Networking Platform",
-    description:
-      "The VBooking Academy empowers agents and experts with the skills and knowledge needed to excel. Courses cover essential areas like: Travel Industry Education, Destination Knowledge, Using V Booking Tools, Marketing & Sales Training",
-    subDescription: "Join Our community as a",
+    title: "home.travel_community.networkingPlatform.title",
+    description: "home.travel_community.networkingPlatform.description",
+    subDescription: "home.travel_community.networkingPlatform.subDescription",
     icon: <NetworkingPlatformIcon />,
     buttons: [
       {
-        title: "Traveler",
+        title: "home.travel_community.networkingPlatform.buttons.traveler",
       },
       {
-        title: "Travel Expert",
+        title: "home.travel_community.networkingPlatform.buttons.travelExpert",
       },
       {
-        title: "Travel Agent",
+        title: "home.travel_community.networkingPlatform.buttons.travelAgent",
       },
     ],
   },
   {
-    title: "VBooking Academy",
-    description:
-      "The VBooking Academy empowers agents and experts with the skills and knowledge needed to excel. Courses cover essential areas like: Travel Industry Education, Destination Knowledge, Using V Booking Tools, Marketing & Sales Training",
+    title: "home.travel_community.vbookingAcademy.title",
+    description: "home.travel_community.vbookingAcademy.description",
     icon: <VBookingAcademyIcon />,
     buttons: [
       {
-        title: "Enroll in VBooking Academy",
+        title: "home.travel_community.vbookingAcademy.buttons.enroll",
       },
     ],
   },
   {
-    title: "Exhibition Centers",
-    description:
-      "Our Exhibition Centers in the Metaverse provide unique opportunities to network and discover. These virtual exhibitions connect agents, suppliers, experts, and travelers to explore new destinations and foster partnerships in a fully immersive environment.",
-    subDescription: "Explore Virtual Exhibitions as a Travel Expert",
+    title: "home.travel_community.exhibitionCenters.title",
+    description: "home.travel_community.exhibitionCenters.description",
+    subDescription: "home.travel_community.exhibitionCenters.subDescription",
     icon: <ExhibitionCentersIcon />,
     buttons: [
       {
-        title: "Register as an Exhibitor",
+        title: "home.travel_community.exhibitionCenters.buttons.register",
       },
     ],
   },
   {
-    title: "World Travel Library",
-    description:
-      "The World Travel Library is an expert-level encyclopedia offering insights on global destinations. Whether you’re a traveler seeking inspiration or an agent expanding expertise, this library has it all.",
+    title: "home.travel_community.worldTravelLibrary.title",
+    description: "home.travel_community.worldTravelLibrary.description",
     icon: <WorldTravelLibraryIcon />,
     buttons: [
       {
-        title: "Explore the World Travel Library",
+        title: "home.travel_community.worldTravelLibrary.buttons.explore",
       },
     ],
   },
   {
-    title: "VBooking Hub",
-    description:
-      "The VBooking Hub is a secure marketplace designed for agents to manage transactions, customize pricing, and access a wide range of travel products. Ideal for creating unique client experiences.",
+    title: "home.travel_community.vbookingHub.title",
+    description: "home.travel_community.vbookingHub.description",
     icon: <VBookingHubIcon width={100} height={100} />,
     buttons: [
       {
-        title: "Access the VBooking Hub as a Travel Agent",
+        title: "home.travel_community.vbookingHub.buttons.access",
       },
     ],
   },
@@ -86,28 +81,28 @@ function TravelCommunity() {
         <div className="text-center">
           <p>
             <Title
-              title="Bringing the "
+              title="home.travel_community.bringing"
               titleColor="text-secondary"
               className="text-clamp-[22px,4vw,36px]"
             />
             <Title
-              title="Travel Community "
+              title="home.travel_community.travel"
               titleColor="text-primary"
               className="text-clamp-[22px,4vw,36px]"
             />
             <Title
-              title="Together"
+              title="home.travel_community.together"
               titleColor="text-secondary"
               className="text-clamp-[22px,4vw,36px]"
             />
           </p>
           <Description
-            Description="At V Booking, we believe in the power of community to drive growth, collaboration, and innovation in the travel industry."
+            Description="home.travel_community.subtitle"
             DescriptionColor="text-grayText"
             className="text-[12px]"
           />
           <Description
-            Description="Through a suite of platforms and initiatives, we’re creating an inclusive ecosystem where travel professionals and travelers alike can connect, learn, and succeed together."
+            Description="home.travel_community.description"
             DescriptionColor="text-grayText"
             className="text-[12px]"
           />
@@ -126,7 +121,7 @@ function TravelCommunity() {
           ))}
         </div>
 
-        <div className="block sm:hidden">
+        <div className="block sm:hidden mt-24">
           <ScrollableCards
             options={data}
             renderCard={(option, index) => (

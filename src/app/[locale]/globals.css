@@ -5,12 +5,40 @@
 body {
   text-wrap: wrap;
   font-family: poppins;
+
+  --sb-track-color: #232e33;
+  --sb-thumb-color: #9c25a0;
+  --sb-size: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 2px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.animations-box {
+  @apply transform hover:scale-[1.02] hover:shadow-lg transition-all duration-300 ease-in-out;
 }
 
 .scroll-bar-hide {

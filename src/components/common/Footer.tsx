@@ -1,10 +1,6 @@
+"use client";
+
 import { images } from "@/assets";
-import { CustomContainer } from "@/Wrapper/CustomContainer";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import i18n from "next-intl";
-import Title from "./Title";
 import {
   FaceBookIcon,
   InstagramIcon,
@@ -12,7 +8,13 @@ import {
   TwitterIcon,
   WhatUsAppIcon,
 } from "@/icons";
+import { isRtl } from "@/utils/IsRtl";
+import { CustomContainer } from "@/Wrapper/CustomContainer";
+import Image from "next/image";
+import Link from "next/link";
 import LanguageSwitcher from "./LanguageSwitcher";
+import Title from "./Title";
+import AccordionSidebar from "./AccordionSidebar";
 
 const data = [
   {
@@ -204,9 +206,9 @@ const socialLinks = [
 
 function Footer() {
   return (
-    <footer className="bg-[#224A9A]">
-      <CustomContainer className="pt-[44px] pb24">
-        <div>
+    <footer className="bg-[#224A9A] text-white">
+      <CustomContainer>
+        <div className="hidden md:block">
           <div className="mb-32">
             <Image src={images.footerLogo} alt="logo" />
           </div>
@@ -233,6 +235,10 @@ function Footer() {
           </div>
         </div>
 
+        <div className="block md:hidden">
+          <AccordionSidebar items={data} />
+        </div>
+
         <div className="flex items-center justify-end mt-32">
           <Title title="Connect with us" titleColor="text-white" className="" />
           <ul className="flex gap-4 me-32 ms-16">
@@ -242,25 +248,32 @@ function Footer() {
               </li>
             ))}
           </ul>
-          <LanguageSwitcher />
+          <div className="hidden md:block">
+            <LanguageSwitcher />
+          </div>
         </div>
 
         <div className="mt-[44px]">
-          <div className="sm:divide-slate-500 sm:divide-x-2 flex flex-wrap gap-3 justify-center">
+          <div
+            className={`${
+              isRtl() ? "sm:divide-x-reverse" : ""
+            } sm:divide-slate-500 sm:divide-x-2 flex flex-wrap gap-3 justify-center`}
+          >
             <Title
               title="Awards: Best Travel Tech 2022."
               titleColor="text-white"
+              className="text-center"
             />
             <Title
               title="Trusted by 10,000+ agents globally."
               titleColor="text-white"
-              className="ps-3"
+              className="ps-3 text-center"
             />
             <div className="flex gap-3">
               <Title
                 title="Secure Payments: "
                 titleColor="text-white"
-                className="ps-3"
+                className="ps-3 text-center"
               />
               <div className="flex gap-3">
                 {[images.payment1, images.payment2, images.payment3].map(
@@ -271,15 +284,19 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="sm:divide-slate-500 sm:divide-x-2 flex flex-wrap gap-3 justify-center mt-10">
+          <div
+            className={`${
+              isRtl() ? "sm:divide-x-reverse" : ""
+            }  sm:divide-slate-500 sm:divide-x-2 flex flex-wrap gap-3 justify-center mt-10`}
+          >
             <Title
               title="© 2025 V Booking. All rights reserved."
-              titleColor="text-white"
+              titleColor="text-white text-center"
             />
             <Title
               title="Designed and Powered by V Booking Tech Solutions."
               titleColor="text-white"
-              className="ps-3"
+              className="ps-3 text-center"
             />
           </div>
         </div>

@@ -17,6 +17,8 @@ import payment1 from "@/assets/images/payment1.png";
 import payment2 from "@/assets/images/payment2.png";
 import payment3 from "@/assets/images/payment3.png";
 import EnFlag from "@/assets/images/en-flag.png";
+import smallLogo from "@/assets/images/smallLogo.png";
+import EgyptFlag from "@/assets/images/eg-flag.png";
 
 export default {
   logo,
@@ -38,4 +40,6 @@ export default {
   payment2,
   payment3,
   EnFlag,
+  smallLogo,
+  EgyptFlag,
 };

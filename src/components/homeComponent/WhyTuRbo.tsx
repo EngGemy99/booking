@@ -14,51 +14,43 @@ import Title from "../common/Title";
 
 const items = [
   {
-    title: "All-in-One Platform",
-    description:
-      "Manage every aspect of your travel business seamlessly under one roof.",
+    title: "home.why_turbo.all_in_one_platform",
+    description: "home.why_turbo.manage_travel_business",
     icon: <OnePlatFormIcon />,
   },
   {
-    title: "Advanced Itinerary Builder",
-    description:
-      "Design detailed and interactive travel plans, personalized to perfection.",
+    title: "home.why_turbo.advanced_itinerary_builder",
+    description: "home.why_turbo.design_travel_plans",
     icon: <ItineraryBuilderIcon />,
   },
   {
-    title: "Real-Time Booking Management",
-    description:
-      "Stay updated with instant availability, bookings, and modifications.",
+    title: "home.why_turbo.real_time_booking_management",
+    description: "home.why_turbo.stay_updated_availability",
     icon: <BookingManagementIcon />,
   },
   {
-    title: "Dynamic Quotation System",
-    description:
-      "Effortlessly create and customize quotes tailored to your clients' needs.",
+    title: "home.why_turbo.dynamic_quotation_system",
+    description: "home.why_turbo.create_customize_quotes",
     icon: <QuotationSystemIcon />,
   },
   {
-    title: "Engaging Holiday Packages",
-    description:
-      "Offer dynamic, visually appealing, and customizable travel experiences.",
+    title: "home.why_turbo.engaging_holiday_packages",
+    description: "home.why_turbo.offer_customizable_travel",
     icon: <HolidayPackagesIcon />,
   },
   {
-    title: "Supplier & Inventory Management",
-    description:
-      "Streamline operations with centralized control over suppliers and services.",
+    title: "home.why_turbo.supplier_inventory_management",
+    description: "home.why_turbo.streamline_operations",
     icon: <InventoryManagementIcon />,
   },
   {
-    title: "Automation & Efficiency",
-    description:
-      "Save time and reduce manual tasks with automated processes and workflows.",
+    title: "home.why_turbo.automation_efficiency",
+    description: "home.why_turbo.save_time_automation",
     icon: <AutomationIcon />,
   },
   {
-    title: "AI-Powered Tools",
-    description:
-      "Enhance efficiency with smart automation, recommendations, and customer support.",
+    title: "home.why_turbo.ai_powered_tools",
+    description: "home.why_turbo.enhance_efficiency_with_ai",
     icon: <AiToolIcon />,
   },
 ];
@@ -68,22 +60,22 @@ function WhyTuRbo() {
       <div className="bg-[#F8E6F9] p-32 rounded-[20px]">
         <div className="text-center">
           <Title
-            title="Why"
+            title="common.our"
             titleColor="text-secondary"
             className="text-clamp-[22px,4vw,36px]"
           />{" "}
           <Title
-            title="TuRbo"
+            title="common.turbo"
             titleColor="text-primary"
             className="text-clamp-[22px,4vw,36px]"
           />
           <Description
-            Description="Empower your business with an advanced platform designed to receive and manage bookings online."
+            Description="home.why_turbo.empower_business_platform"
             DescriptionColor="text-grayText"
             className="text-[12px]"
           />
           <Description
-            Description="Streamline reservation processes, improve client experiences, and seamlessly handle inquiries, ensuring your business stays competitive in the digital travel landscape."
+            Description="home.why_turbo.streamline_reservations"
             DescriptionColor="text-grayText"
             className="text-[12px]"
           />
@@ -120,7 +112,7 @@ const Box = ({ title, description, icon, index }: BoxProps) => {
   ];
   return (
     <div
-      className={`flex items-center flex-col text-center ${gridClasses[index]} space-x-4  bg-white p-16 rounded-[20px] sm:col-span-1 md:col-span-1`}
+      className={`flex items-center flex-col text-center ${gridClasses[index]} space-x-4  bg-white p-16 rounded-[20px] sm:col-span-1 md:col-span-1 animations-box`}
     >
       <div>{icon}</div>
       <div className="mt-16">

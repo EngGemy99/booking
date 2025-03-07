@@ -7,58 +7,52 @@ import Image, { StaticImageData } from "next/image";
 
 const items = [
   {
-    title: "HTML to HTMX",
-    description:
-      "We’ve evolved from conventional HTML to HTMX, delivering dynamic, interactive experiences directly within the browser. This means faster load times and a more engaging user experience.",
+    title: "home.InnovativeTechnology.html_to_htmx",
+    description: "home.InnovativeTechnology.html_to_htmx_description",
     image: images.InnovativeTechnology1,
   },
   {
-    title: "Cold Calls & Messages to Full AI-Driven Automation",
-    description:
-      "Instead of traditional customer support, we deploy fully automated AI solutions that provide real-time, customized assistance across multiple channels, reducing response times and improving client satisfaction.",
+    title: "home.InnovativeTechnology.cold_calls_to_ai_automation",
+    description: "home.InnovativeTechnology.ai_customer_support",
     image: images.InnovativeTechnology2,
   },
   {
-    title: "2D Media to the Metaverse",
-    description:
-      "Transitioning from standard 2D visuals, we now offer immersive metaverse capabilities that revolutionize client interactions, providing virtual tours, 3D environments, and holographic communication to bring destinations to life.",
+    title: "home.InnovativeTechnology.2d_media_to_metaverse",
+    description: "home.InnovativeTechnology.metaverse_transition",
     image: images.InnovativeTechnology3,
   },
   {
-    title: "Normal Big Data Analysis to Data Operations (DataOps)",
-    description:
-      "Our DataOps approach goes beyond standard data analysis, incorporating real-time data operations to drive actionable insights, refine decision-making, and optimize business processes at every level.",
+    title: "home.InnovativeTechnology.big_data_to_dataops",
+    description: "home.InnovativeTechnology.dataops_approach",
     image: images.InnovativeTechnology4,
   },
   {
-    title: "Traditional Search Engines to NLP-Powered Search",
-    description:
-      "Moving beyond basic search functions, we leverage Natural Language Processing (NLP) to understand client needs more accurately, delivering relevant, personalized search results that improve user experience and conversion rates.",
+    title: "home.InnovativeTechnology.traditional_search_to_nlp",
+    description: "home.InnovativeTechnology.nlp_search",
     image: images.InnovativeTechnology5,
   },
   {
-    title: "Centralized Servers to Decentralized Servers",
-    description:
-      "We’re moving from centralized to decentralized server architecture, enhancing data security, reducing latency, and increasing resilience. This approach ensures operational continuity and scalability across global markets.",
+    title: "home.InnovativeTechnology.centralized_to_decentralized_servers",
+    description: "home.InnovativeTechnology.decentralized_servers",
     image: images.InnovativeTechnology6,
   },
 ];
 function InnovativeTechnology() {
   return (
-    <CustomContainer className="pt-[44px]">
+    <CustomContainer>
       <div className="text-center">
         <Title
-          title="home.Our"
+          title="common.our"
           titleColor="text-secondary"
           className="text-clamp-[22px,4vw,36px]"
         />{" "}
         <Title
-          title="home.Innovative_Technology"
+          title="home.InnovativeTechnology.innovative_technology"
           titleColor="text-primary"
           className="text-clamp-[22px,4vw,36px]"
         />
         <Description
-          Description="home.A_Transformation_from_Traditional_to_Advanced_Technology"
+          Description="home.InnovativeTechnology.transformation_to_advanced_technology"
           DescriptionColor="text-grayText"
           className="text-[12px]"
         />

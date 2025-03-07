@@ -6,7 +6,8 @@ import { EnFlagIcon } from "@/icons";
 import Title from "./Title";
 import { Locale } from "@/i18n/routing";
 import { isRtl } from "@/utils/IsRtl";
-import Loader from "./Loader";
+import Image from "next/image";
+import { images } from "@/assets";
 
 type Props = {
   children: ReactNode;
@@ -47,10 +48,14 @@ export default function LanguageSwitcher() {
         onClick={handleClick}
         className={`bg-[#F2F4F7] w-[78px] h-[40px] py-6 px-12 divide-x-2 ${
           checkIsRtl ? "divide-x-reverse" : ""
-        } divide-[#EAECF0] flex rounded-[100px] cursor-pointer`}
+        } divide-[#EAECF0] flex rounded-[100px] cursor-pointer items-center`}
       >
         <div className="pe-6">
-          <EnFlagIcon />
+          {locale === "en" ? (
+            <Image src={images.EnFlag} alt="flag" />
+          ) : (
+            <Image src={images.EgyptFlag} alt="flag" />
+          )}
         </div>
         <Title
           title={locale === "en" ? "EN" : "AR"}

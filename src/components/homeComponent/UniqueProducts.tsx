@@ -67,7 +67,7 @@ function UniqueProducts() {
         ))}
       </div>
 
-      <div className="block sm:hidden">
+      <div className="block sm:hidden mt-24">
         <ScrollableCards
           options={UniqueProductsItems}
           renderCard={(option) => (
@@ -83,7 +83,7 @@ export default UniqueProducts;
 
 const Box = ({ title, icon }: any) => {
   return (
-    <div className="bg-white p-[16px] rounded-[16px] flex flex-col justify-center items-center gap-4 flex-1 w-[144px] md:w-[174px]   ">
+    <div className="animations-box bg-white p-[16px] rounded-[16px] flex flex-col justify-center items-center gap-4 flex-1 w-[144px] md:w-[174px]   ">
       {icon}
       <Title
         title={title}

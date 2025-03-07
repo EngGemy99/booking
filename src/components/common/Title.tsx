@@ -5,10 +5,6 @@ interface TitleProps {
   title: string;
   titleColor: string;
   className?: string;
-  isGradient?: boolean;
-  gradientDir?: string;
-  from?: string;
-  to?: string;
 }
 
 function Title({ title, titleColor, className }: TitleProps) {

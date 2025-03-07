@@ -25,3 +25,4 @@ export * from "./src/instagram";
 export * from "./src/linkedin";
 export * from "./src/whatusApp";
 export * from "./src/enFlag";
+export * from "./src/close";

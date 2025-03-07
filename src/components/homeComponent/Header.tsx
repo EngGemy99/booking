@@ -7,8 +7,8 @@ import Title from "../common/Title";
 
 function Header() {
   return (
-    <CustomContainer className="flex items-center flex-col-reverse lg:flex-row md:gap-[35px] xl:gap-[123px] bg-[#F7FCFC]">
-      <div className="lg:w-[813px]">
+    <CustomContainer className="flex items-center min-[1920px]:justify-between flex-col-reverse lg:flex-row md:gap-[35px] xl:gap-[123px] bg-[#F7FCFC]">
+      <div className="2xl:w-[813px]">
         <Title
           title="home.header.empowering_tourism"
           titleColor="text-primary"
@@ -19,7 +19,7 @@ function Header() {
           className="text-clamp-[36px,4vw,64px] font-medium"
           titleColor="text-secondary"
         />
-        <div className="">
+        <div>
           <Description
             Description="home.header.vbooking_your_partner_in_seamless_travel_solutions"
             DescriptionColor="text-text mb-[6px] text-[14px]"
@@ -41,7 +41,7 @@ function Header() {
           />
         </div>
       </div>
-      <div className="lg:w-[484px]">
+      <div className="w-[484px]">
         <Image src={images.headerImage} alt="image header" />
       </div>
     </CustomContainer>

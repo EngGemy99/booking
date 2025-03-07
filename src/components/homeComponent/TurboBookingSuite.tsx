@@ -64,7 +64,7 @@ function TurboBookingSuite() {
         ))}
       </div>
 
-      <div className="block sm:hidden">
+      <div className="block sm:hidden mt-24">
         <ScrollableCards
           options={items}
           renderCard={(option) => (

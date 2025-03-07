@@ -6,29 +6,24 @@ import Button from "../common/Button";
 
 const data = [
   {
-    title: "AI and Machine Learning",
-    description:
-      "Discover our advanced AI capabilities through Genielamp.ai to personalize experiences and automate itinerary processes with our Ai agent.",
+    title: "home.our_technology.ai_machine_learning",
+    description: "home.our_technology.ai_description",
   },
   {
-    title: "Advanced Metaverse Technology",
-    description:
-      "Learn how we’re bringing immersive experiences to clients with VVERSE for 3D environments and interactive travel options.",
+    title: "home.our_technology.advanced_metaverse_technology",
+    description: "home.our_technology.metaverse_description",
   },
   {
-    title: "HTMX",
-    description:
-      "See how we leverage HTMX to create seamless, dynamic web experiences that increase engagement and speed.",
+    title: "home.our_technology.htmx",
+    description: "home.our_technology.htmx_description",
   },
   {
-    title: "Decentralized Servers",
-    description:
-      "Explore our partnership with ThreeFold to boost security and performance with decentralized server architecture.",
+    title: "home.our_technology.data_operations_automation",
+    description: "home.our_technology.data_operations_description",
   },
   {
-    title: "Data Operations and Automation",
-    description:
-      "Read about our DataOps and automation processes in collaboration with Vindo.ai to drive efficiency and actionable insights.",
+    title: "home.our_technology.decentralized_servers",
+    description: "home.our_technology.decentralized_servers_description",
   },
 ];
 
@@ -40,18 +35,18 @@ function OurTechnology() {
         <div className="relative z-10">
           <div className="text-center">
             <Title
-              title="Explore Our Technology"
+              title="home.our_technology.explore_technology"
               titleColor="text-white"
               className="text-clamp-[22px,4vw,36px] font-medium"
             />
             <Description
-              Description="Read more about how we’re using these technologies to enhance the travel industry:"
+              Description="home.our_technology.read_more_technologies"
               DescriptionColor="text-white"
               className="text-[12px]"
             />
           </div>
           {/* Responsive Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-16 mt-24">
             {data.map((item, index) => (
               <Box
                 key={index}
@@ -86,7 +81,7 @@ const Box = ({ title, description, index }: BoxProps) => {
 
   return (
     <div
-      className={`p-16 rounded-[16px] bg-[#EFF9FA] ${gridClasses[index]} sm:col-span-1 md:col-span-1`}
+      className={`p-16 rounded-[16px] bg-[#EFF9FA] ${gridClasses[index]} sm:col-span-1 md:col-span-1 animations-box`}
     >
       <Title
         title={title}
@@ -99,7 +94,7 @@ const Box = ({ title, description, index }: BoxProps) => {
         className="text-[12px]"
       />
       <Button
-        text="Learn More"
+        text="common.learn_more"
         className="mt-4 text-darkText border-[#D0D5DD] bg-white border"
       />
     </div>
