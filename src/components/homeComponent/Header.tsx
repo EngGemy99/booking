@@ -7,16 +7,16 @@ import Title from "../common/Title";
 
 function Header() {
   return (
-    <CustomContainer className="flex items-center min-[1920px]:justify-between flex-col-reverse lg:flex-row md:gap-[35px] xl:gap-[123px] bg-[#F7FCFC]">
+    <CustomContainer className="flex items-center min-[1920px]:justify-between flex-col-reverse lg:flex-row md:gap-[35px] xl:gap-[123px] bg-white">
       <div className="2xl:w-[813px]">
         <Title
           title="home.header.empowering_tourism"
           titleColor="text-primary"
-          className="text-clamp-[36px,4vw,64px] block font-medium"
+          className="text-clamp-[34px,4vw,64px] block font-medium"
         />
         <Title
           title="home.header.elevating_experiences"
-          className="text-clamp-[36px,4vw,64px] font-medium"
+          className="text-clamp-[34px,4vw,64px] font-medium"
           titleColor="text-secondary"
         />
         <div>
@@ -41,7 +41,7 @@ function Header() {
           />
         </div>
       </div>
-      <div className="w-[484px]">
+      <div className="w-[330px] md:w-[484px]">
         <Image src={images.headerImage} alt="image header" />
       </div>
     </CustomContainer>

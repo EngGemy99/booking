@@ -67,13 +67,7 @@ function NavBar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const toggleExpand = (index: number) => {
-    if (expandedItems.includes(index)) {
-      setExpandedItems(expandedItems.filter((item) => item !== index));
-    } else {
-      setExpandedItems([...expandedItems, index]);
-    }
-  };
+
   return (
     <CustomContainer className="mt-[36px] !py-0">
       <header className="bg-white h-[80px]">

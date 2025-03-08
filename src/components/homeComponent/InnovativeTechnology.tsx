@@ -76,12 +76,14 @@ interface BoxProps {
 const Box = ({ title, image, description }: BoxProps) => {
   return (
     <div className="bg-white p-16 flex items-center gap-4 rounded-lg">
-      <Image src={image} alt={title} />
       <div>
+        <Image src={image} alt={title} />
+      </div>
+      <div className="w-[222px] min-[450px]:w-full">
         <Title
           title={title}
           titleColor="text-secondary"
-          className="text-[22px] font-semibold text-wrap"
+          className="text-clamp-[16px,3vw,22px] font-semibold text-wrap"
         />
         <Description
           Description={description}

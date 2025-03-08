@@ -83,12 +83,12 @@ export default UniqueProducts;
 
 const Box = ({ title, icon }: any) => {
   return (
-    <div className="animations-box bg-white p-[16px] rounded-[16px] flex flex-col justify-center items-center gap-4 flex-1 w-[144px] md:w-[174px]   ">
+    <div className="animations-box bg-white p-[16px] rounded-[16px] flex flex-col justify-center items-center gap-4 flex-1 w-[144px] md:w-[174px]  h-[174px] ">
       {icon}
       <Title
         title={title}
         titleColor="text-secondary"
-        className="text-wrap text-center font-semibold bg-gradient-to-r from-[#1C3D80] to-[#4676D7] inline-block text-transparent bg-clip-text"
+        className="text-wrap text-center font-semibold bg-gradient-to-r from-[#1C3D80] to-[#4676D7] inline-block text-transparent bg-clip-text text-[14px]"
       />
     </div>
   );

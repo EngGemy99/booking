@@ -76,7 +76,7 @@ const data = [
 function TravelCommunity() {
   return (
     <CustomContainer className="bg-[url(../../assets/images/TravelCommunityBg.jpg)] bg-cover bg-center pt-[64px] mt-[32px] relative pb-[3rem]">
-      <div className="absolute inset-0 opacity-[.7] bg-gradient-to-b from-[#F7FCFC] to-[#F7E0F8]"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-sky-100 via-[#F9DBE8] to-[#DBF1F2]"></div>
       <div className="relative z-10">
         <div className="text-center">
           <p>
