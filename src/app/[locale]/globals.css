@@ -122,3 +122,15 @@ body::-webkit-scrollbar-thumb {
     background-position: left;
   }
 }
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #fff;
+}
+
+.accordion-content.open {
+  max-height: 200px; /* Adjust based on content height */
+  transition: max-height 0.3s ease-in;
+}

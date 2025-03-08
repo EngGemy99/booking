@@ -75,8 +75,8 @@ const data = [
 
 function TravelCommunity() {
   return (
-    <CustomContainer className="bg-[url(../../assets/images/TravelCommunityBg.jpg)] bg-cover bg-center pt-[64px] mt-[32px] relative pb-[3rem]">
-      <div className="absolute inset-0 bg-gradient-to-b from-sky-100 via-[#F9DBE8] to-[#DBF1F2]"></div>
+    <CustomContainer className="bg-[url(../../assets/images/OurCommunity.png)] bg-cover bg-center pt-[64px] mt-[32px] relative pb-[3rem]">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#e2f4f5] via-[#F9DBE8] to-[#DBF1F2] opacity-55"></div>
       <div className="relative z-10">
         <div className="text-center">
           <p>
@@ -107,7 +107,7 @@ function TravelCommunity() {
             className="text-[12px]"
           />
         </div>
-        <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mt-24">
+        <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-16 mt-24">
           {data.map((item, index) => (
             <Box
               key={index}

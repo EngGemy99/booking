@@ -1,5 +1,6 @@
+"use client";
 import { CustomContainer } from "@/Wrapper/CustomContainer";
-import React from "react";
+import React, { useState } from "react";
 import Title from "../common/Title";
 import Description from "../common/Description";
 import { images } from "@/assets";
@@ -57,10 +58,14 @@ function InnovativeTechnology() {
           className="text-[12px]"
         />
       </div>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 mt-24">
+      <div className="hidden sm:grid grid-cols-1 gap-4 lg:grid-cols-2 mt-24">
         {items.map((item, index) => (
           <Box key={index} {...item} />
         ))}
+      </div>
+
+      <div className="sm:hidden mt-24">
+        <AccordionBox items={items} />
       </div>
     </CustomContainer>
   );
@@ -91,6 +96,38 @@ const Box = ({ title, image, description }: BoxProps) => {
           className="text-[12px] font-normal text-wrap"
         />
       </div>
+    </div>
+  );
+};
+
+const AccordionBox = ({ items }: any) => {
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const handleToggle = (index: number) => {
+    setOpenIndex(openIndex === index ? -1 : index);
+  };
+
+  return (
+    <div className="w-full">
+      {items.map((item: BoxProps, index: number) => (
+        <div key={index} className="mb-10">
+          <div
+            className={`cursor-pointer bg-white px-24 py-16 rounded-[16px] ${
+              openIndex === index ? "hidden" : ""
+            }`}
+            onClick={() => handleToggle(index)}
+          >
+            <Title title={item.title} titleColor="text-secondary" />
+          </div>
+          <div
+            className={`accordion-content rounded-[16px] ${
+              openIndex === index ? "open" : ""
+            }`}
+          >
+            <Box {...item} />
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
