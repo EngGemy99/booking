@@ -239,9 +239,9 @@ function Footer() {
           <AccordionSidebar items={data} />
         </div>
 
-        <div className="flex items-center justify-end mt-32">
+        <div className="flex items-center justify-between sm:justify-end mt-32">
           <Title title="Connect with us" titleColor="text-white" className="" />
-          <ul className="flex gap-4 me-32 ms-16">
+          <ul className="flex gap-4 sm:me-32 sm:ms-16">
             {socialLinks.map((link, index) => (
               <li key={index} className="cursor-pointer">
                 {link.icon}

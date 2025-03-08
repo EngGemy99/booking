@@ -7,7 +7,7 @@ import Title from "../common/Title";
 
 function Header() {
   return (
-    <CustomContainer className="flex items-center min-[1920px]:justify-between flex-col-reverse lg:flex-row md:gap-[35px] xl:gap-[123px] bg-white">
+    <CustomContainer className="flex items-center min-[1920px]:justify-between flex-col lg:flex-row md:gap-[35px] xl:gap-[123px] bg-white">
       <div className="2xl:w-[813px]">
         <Title
           title="home.header.empowering_tourism"

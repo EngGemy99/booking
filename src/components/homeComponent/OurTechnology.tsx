@@ -30,7 +30,7 @@ const data = [
 function OurTechnology() {
   return (
     <CustomContainer className="pt-[44px]">
-      <div className="bg-[url(../../assets/images/OurTechnologyBg.jpg)] bg-cover bg-center relative rounded-[26px] overflow-hidden p-[48px]">
+      <div className="bg-[url(../../assets/images/OurTechnologyBg.jpg)] bg-cover bg-center relative rounded-[26px] overflow-hidden px-16 py-24 sm:p-[48px] min-[1920px]:px-[173px] 2xl:py-[50px]">
         <div className="inset-0 absolute bg-[#224A9A] opacity-[.8]"></div>
         <div className="relative z-10">
           <div className="text-center">
