@@ -1,13 +1,13 @@
+"use client";
 import { images } from "@/assets";
 import { CustomContainer } from "@/Wrapper/CustomContainer";
 import Image from "next/image";
 import Button from "../common/Button";
 import Description from "../common/Description";
 import Title from "../common/Title";
-
 function Header() {
   return (
-    <CustomContainer className="flex items-center min-[1920px]:justify-between flex-col lg:flex-row md:gap-[35px] xl:gap-[123px] bg-white">
+    <CustomContainer className="flex items-center min-[1920px]:justify-between flex-col lg:flex-row md:gap-[35px] xl:gap-[123px] bg-[#F7FCFC]">
       <div className="2xl:w-[813px]">
         <Title
           title="home.header.empowering_tourism"
@@ -41,8 +41,8 @@ function Header() {
           />
         </div>
       </div>
-      <div className="w-[330px] md:w-[484px]">
-        <Image src={images.headerImage} alt="image header" />
+      <div className="md:w-[484px]">
+        <Image src={images.animatedHeaderImage} alt="headerImage" />
       </div>
     </CustomContainer>
   );

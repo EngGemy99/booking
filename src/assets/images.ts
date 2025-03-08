@@ -1,6 +1,7 @@
 import logo from "@/assets/images/logo.png";
 import footerLogo from "@/assets/images/footerLogo.png";
 import headerImage from "@/assets/images/headerImage.png";
+import animatedHeaderImage from "@/assets/images/animatedHeaderImage.gif";
 import laptop from "@/assets/images/laptop.png";
 import InnovativeTechnology1 from "@/assets/images/InnovativeTechnology 1.png";
 import InnovativeTechnology2 from "@/assets/images/InnovativeTechnology 2.png";
@@ -42,4 +43,5 @@ export default {
   EnFlag,
   smallLogo,
   EgyptFlag,
+  animatedHeaderImage,
 };
